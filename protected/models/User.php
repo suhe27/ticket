@@ -105,9 +105,9 @@ class User extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('second_phone',$this->second_phone,true);
 		$criteria->compare('comment',$this->comment,true);
-	//	$criteria->compare('create_time',$this->create_time);
-	//	$criteria->compare('update_time',$this->update_time);
-	//	$criteria->compare('valid',$this->valid);
+		$criteria->compare('create_time',$this->create_time);
+		$criteria->compare('update_time',$this->update_time);
+		$criteria->compare('valid',$this->valid);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,

@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
+	'客户档案'=>array('index'),
 	$model->name,
 );
 
 $this->menu=array(
-	array('label'=>'List User', 'url'=>array('index')),
-	array('label'=>'Create User', 'url'=>array('create')),
-	array('label'=>'Update User', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete User', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage User', 'url'=>array('admin')),
+	array('label'=>'用户列表', 'url'=>array('index')),
+	array('label'=>'创建用户', 'url'=>array('create')),
+	array('label'=>'编辑用户', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'删除用户', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'用户管理', 'url'=>array('admin')),
 );
 ?>
 

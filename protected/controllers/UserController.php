@@ -28,7 +28,7 @@ class UserController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -116,7 +116,10 @@ class UserController extends Controller
 		if(Yii::app()->request->isPostRequest)
 		{
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			$model=$this->loadModel($id);
+			$model->valid=0;
+			$model->save();
+			//$this->loadModel($id)->delete();
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
@@ -131,7 +134,14 @@ class UserController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('User');
+                $dataProvider=new CActiveDataProvider('User', array(
+                	'criteria'=>array(
+                        	'condition'=>'valid=1',
+                        	'order'=>'id DESC',
+                        //'with'=>array('author'),
+                	),
+        	));
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -146,7 +156,7 @@ class UserController extends Controller
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['User']))
 			$model->attributes=$_GET['User'];
-
+		$model->valid=1;
 		$this->render('admin',array(
 			'model'=>$model,
 		));
