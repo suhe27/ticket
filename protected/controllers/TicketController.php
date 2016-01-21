@@ -69,6 +69,8 @@ class TicketController extends Controller
 		if(isset($_POST['Ticket']))
 		{
 			$model->attributes=$_POST['Ticket'];
+			$model->total_money=$model->weight * $model->price + $model->insurance + $model->packages + $model->pay_before;
+			$model->density=$model->weight / $model->size;
                         $model->create_time=time();
                         $model->update_time=time();
                         $model->valid=1;
@@ -96,6 +98,9 @@ class TicketController extends Controller
 		if(isset($_POST['Ticket']))
 		{
 			$model->attributes=$_POST['Ticket'];
+			$model->total_money=$model->weight * $model->price + $model->insurance + $model->packages + $model->pay_before;
+			$model->density=$model->weight / $model->size;	
+        		$model->update_time=time();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

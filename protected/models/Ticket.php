@@ -64,15 +64,16 @@ class Ticket extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+			array('order_id, order_number , send_time , package_name', 'required'),
 			array('send_time, package_num, package_size, packages, user_id, create_time, update_time, valid', 'numerical', 'integerOnly'=>true),
 			array('total_money, price, evalatue_money, insurance, pay_before, receive_by, normal_price, pay_money', 'numerical'),
-			array('order_id, order_number, user_code, sender_city, receive_city, delivery_type, reward', 'length', 'max'=>20),
+			array('order_id, order_number, sender_city, receive_city, delivery_type, reward', 'length', 'max'=>20),
 			array('package_name', 'length', 'max'=>60),
 			array('weight, size, package_type, density, exchange_rate, partner', 'length', 'max'=>30),
 			array('comment', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, order_id, order_number, send_time, user_code, package_name, package_num, weight, size, total_money, package_size, package_type, density, price, evalatue_money, insurance, packages, pay_before, receive_by, exchange_rate, sender_city, receive_city, delivery_type, comment, partner, user_id, reward, normal_price, pay_money, create_time, update_time, valid', 'safe', 'on'=>'search'),
+			array('id, order_id, order_number, send_time, package_name, package_num, weight, size, total_money, package_size, package_type, density, price, evalatue_money, insurance, packages, pay_before, receive_by, exchange_rate, sender_city, receive_city, delivery_type, comment, partner, user_id, reward, normal_price, pay_money, create_time, update_time, valid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -143,7 +144,7 @@ class Ticket extends CActiveRecord
 		$criteria->compare('order_id',$this->order_id,true);
 		$criteria->compare('order_number',$this->order_number,true);
 		$criteria->compare('send_time',$this->send_time);
-		$criteria->compare('user_code',$this->user_code,true);
+		//$criteria->compare('user_code',$this->user_code,true);
 		$criteria->compare('package_name',$this->package_name,true);
 		$criteria->compare('package_num',$this->package_num);
 		$criteria->compare('weight',$this->weight,true);

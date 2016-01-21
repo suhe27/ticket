@@ -121,11 +121,11 @@ class User extends CActiveRecord
         {
 		$connection = Yii::app()->db;
 		$table = User::tableName();
-		$sql = "SELECT id,name FROM `$table` where valid=1 ORDER BY id DESC";
+		$sql = "SELECT id,user_code FROM `$table` where valid=1 ORDER BY id DESC";
 		$command = $connection->createCommand($sql);
 		$result = $command->queryAll();
 		foreach($result as $value){
-			$array[$value['id']] = $value['name'];
+			$array[$value['id']] = $value['user_code'];
 		} 
                 //$array = array('1'=>'全新','2'=>'使用过-很新','3'=>'使用过-较好','4'=>'使用过-较旧');
                 if($val) {

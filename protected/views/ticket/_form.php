@@ -36,16 +36,16 @@
 		?>
 		<?php echo $form->error($model,'send_time'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'user_code'); ?>
 		<?php echo $form->textField($model,'user_code',array('size'=>20,'maxlength'=>20)); ?>
 		<?php echo $form->error($model,'user_code'); ?>
 	</div>
-
+!-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'package_name'); ?>
-		<?php echo $form->textField($model,'package_name',array('size'=>60,'maxlength'=>60)); ?>
+		<?php echo $form->textField($model,'package_name',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'package_name'); ?>
 	</div>
 
@@ -66,13 +66,13 @@
 		<?php echo $form->textField($model,'size',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'size'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'total_money'); ?>
 		<?php echo $form->textField($model,'total_money'); ?>
 		<?php echo $form->error($model,'total_money'); ?>
 	</div>
-
+!-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'package_size'); ?>
 		<?php echo $form->textField($model,'package_size'); ?>
@@ -84,13 +84,13 @@
 		<?php echo $form->textField($model,'package_type',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'package_type'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'density'); ?>
 		<?php echo $form->textField($model,'density',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'density'); ?>
 	</div>
-
+!-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'price'); ?>
 		<?php echo $form->textField($model,'price'); ?>
