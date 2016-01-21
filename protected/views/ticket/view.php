@@ -47,8 +47,8 @@ $this->menu=array(
 		'reward',
 		'normal_price',
 		'pay_money',
-		'create_time',
-		'update_time',
-		'valid',
+	//	'create_time',
+	//	'update_time',
+	//	'valid',
 	),
 )); ?>

@@ -39,14 +39,14 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		'id',
+		//'id',
 		'user_code',
 		'name',
 		'city',
 		'phone',
 		'email',
-		/*
 		'second_phone',
+		/**
 		'comment',
 		'create_time',
 		'update_time',

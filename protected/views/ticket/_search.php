@@ -149,7 +149,7 @@
 		<?php echo $form->label($model,'pay_money'); ?>
 		<?php echo $form->textField($model,'pay_money'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->label($model,'create_time'); ?>
 		<?php echo $form->textField($model,'create_time'); ?>
@@ -164,9 +164,9 @@
 		<?php echo $form->label($model,'valid'); ?>
 		<?php echo $form->textField($model,'valid'); ?>
 	</div>
-
+!-->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('搜索'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

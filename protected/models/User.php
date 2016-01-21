@@ -113,4 +113,26 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+        /**
+         * @return array user list.
+         */
+        public function user_list($val = null)
+        {
+		$connection = Yii::app()->db;
+		$table = User::tableName();
+		$sql = "SELECT id,name FROM `$table` where valid=1 ORDER BY id DESC";
+		$command = $connection->createCommand($sql);
+		$result = $command->queryAll();
+		foreach($result as $value){
+			$array[$value['id']] = $value['name'];
+		} 
+                //$array = array('1'=>'全新','2'=>'使用过-很新','3'=>'使用过-较好','4'=>'使用过-较旧');
+                if($val) {
+                        return $array[$val];
+                }
+                else {
+                        return $array;
+                }
+        }
 }

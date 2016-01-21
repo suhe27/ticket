@@ -118,7 +118,7 @@ class Ticket extends CActiveRecord
 			'delivery_type' => '运输方式',
 			'comment' => '备注',
 			'partner' => '业务',
-			'user_id' => '用户关联ID',
+			'user_id' => '客户',
 			'reward' => '返点',
 			'normal_price' => '低价',
 			'pay_money' => '应付款',

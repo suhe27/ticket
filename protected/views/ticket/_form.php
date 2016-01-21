@@ -4,9 +4,9 @@
 	'id'=>'ticket-form',
 	'enableAjaxValidation'=>false,
 )); ?>
-
+<!--
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+!-->
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
@@ -23,7 +23,17 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'send_time'); ?>
-		<?php echo $form->textField($model,'send_time'); ?>
+		<?php
+		$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+    			'model' => $model,
+    			'attribute' => 'send_time',
+    			'htmlOptions' => array(
+        			'size' => '10',         // textField size
+        			'maxlength' => '10',    // textField maxlength
+    			),
+			'options'=>array( 'dateFormat'=>'yymmdd',),
+		));
+		?>
 		<?php echo $form->error($model,'send_time'); ?>
 	</div>
 
@@ -155,7 +165,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
+		<?php echo $form->dropDownList($model,'user_id',User::user_list()); ?>
 		<?php echo $form->error($model,'user_id'); ?>
 	</div>
 
@@ -176,7 +186,7 @@
 		<?php echo $form->textField($model,'pay_money'); ?>
 		<?php echo $form->error($model,'pay_money'); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'create_time'); ?>
 		<?php echo $form->textField($model,'create_time'); ?>
@@ -194,9 +204,9 @@
 		<?php echo $form->textField($model,'valid'); ?>
 		<?php echo $form->error($model,'valid'); ?>
 	</div>
-
+!-->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '保存' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

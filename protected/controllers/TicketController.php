@@ -28,7 +28,7 @@ class TicketController extends Controller
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'users'=>array('@'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -69,6 +69,9 @@ class TicketController extends Controller
 		if(isset($_POST['Ticket']))
 		{
 			$model->attributes=$_POST['Ticket'];
+                        $model->create_time=time();
+                        $model->update_time=time();
+                        $model->valid=1;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
