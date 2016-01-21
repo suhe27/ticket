@@ -64,7 +64,8 @@ class Ticket extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('order_id, order_number , send_time , package_name', 'required'),
+			//array('user_code','unique','message'=>'客户代码已存在'),
+			array('order_id, order_number , send_time , package_name , size', 'required'),
 			array('send_time, package_num, package_size, packages, user_id, create_time, update_time, valid', 'numerical', 'integerOnly'=>true),
 			array('total_money, price, evalatue_money, insurance, pay_before, receive_by, normal_price, pay_money', 'numerical'),
 			array('order_id, order_number, sender_city, receive_city, delivery_type, reward', 'length', 'max'=>20),
