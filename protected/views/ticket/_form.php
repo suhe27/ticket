@@ -206,7 +206,7 @@
 	</div>
 !-->
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? '保存' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? '保存' : '保存'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

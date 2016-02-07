@@ -1,19 +1,19 @@
 <?php
 $this->breadcrumbs=array(
-	'Tickets'=>array('index'),
+	'订单'=>array('index'),
 	$model->id,
 );
 
 $this->menu=array(
-	array('label'=>'List Ticket', 'url'=>array('index')),
-	array('label'=>'Create Ticket', 'url'=>array('create')),
-	array('label'=>'Update Ticket', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Ticket', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Ticket', 'url'=>array('admin')),
+	array('label'=>'订单列表', 'url'=>array('index')),
+	array('label'=>'新建订单', 'url'=>array('create')),
+	array('label'=>'编辑订单', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'删除订单', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'订单管理', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Ticket #<?php echo $model->id; ?></h1>
+<h1>订单详情 <?php echo $model->order_id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

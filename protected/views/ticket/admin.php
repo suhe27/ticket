@@ -1,6 +1,5 @@
 <?php
 $this->breadcrumbs=array(
-	'Tickets'=>array('index'),
 	'运单管理',
 );
 

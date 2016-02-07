@@ -29,8 +29,8 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'运单', 'url'=>array('/ticket/admin')),
-				array('label'=>'老板', 'url'=>array('/ticket/index')),
-				array('label'=>'莫办', 'url'=>array('/ticket/create')),
+				//array('label'=>'老板', 'url'=>array('/ticket/index')),
+				//array('label'=>'莫办', 'url'=>array('/ticket/create')),
 				array('label'=>'客户档案', 'url'=>array('/user/admin')),
 				array('label'=>'登录', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'退出 ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

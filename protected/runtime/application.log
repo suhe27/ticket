@@ -413,3 +413,27 @@ Stack trace:
 REQUEST_URI=/yii/ticket_mgmt/index.php?r=ticket/update&id=1
 in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (102)
 in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:21:54 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:21:58 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:07 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:10 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:16 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:21 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:31 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 16:22:34 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)

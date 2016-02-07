@@ -1,7 +1,6 @@
 <?php
 
 $this->breadcrumbs=array(
-	'客户档案'=>array('index'),
 	'用户管理',
 );
 

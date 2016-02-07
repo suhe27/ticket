@@ -1,11 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'Tickets',
+	'订单',
 );
 
 $this->menu=array(
-	array('label'=>'Create Ticket', 'url'=>array('create')),
-	array('label'=>'Manage Ticket', 'url'=>array('admin')),
+	array('label'=>'新建订单', 'url'=>array('create')),
+	array('label'=>'订单管理', 'url'=>array('admin')),
 );
 ?>
 
