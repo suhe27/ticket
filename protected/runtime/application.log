@@ -437,3 +437,9 @@ in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
 2016/02/07 16:22:34 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
 in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
 in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 17:09:37 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)
+2016/02/07 17:09:46 [warning] [application] 设置非安全（unsafe）属性 "user_code" 失败。
+in /Library/WebServer/Documents/yii/ticket_mgmt/protected/controllers/TicketController.php (156)
+in /Library/WebServer/Documents/yii/ticket_mgmt/index.php (14)

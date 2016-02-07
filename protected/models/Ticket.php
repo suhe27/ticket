@@ -74,7 +74,7 @@ class Ticket extends CActiveRecord
 			array('comment', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, order_id, order_number, send_time, package_name, package_num, weight, size, total_money, package_size, package_type, density, price, evalatue_money, insurance, packages, pay_before, receive_by, exchange_rate, sender_city, receive_city, delivery_type, comment, partner, user_id, reward, normal_price, pay_money, create_time, update_time, valid', 'safe', 'on'=>'search'),
+			array('id,order_id, order_number, send_time, package_name, package_num, weight, size, total_money, package_size, package_type, density, price, evalatue_money, insurance, packages, pay_before, receive_by, exchange_rate, sender_city, receive_city, delivery_type, comment, partner, user_id, reward, normal_price, pay_money, create_time, update_time, valid', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -141,7 +141,7 @@ class Ticket extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id,true);
+		//$criteria->compare('id',$this->id,true);
 		$criteria->compare('order_id',$this->order_id,true);
 		$criteria->compare('order_number',$this->order_number,true);
 		$criteria->compare('send_time',$this->send_time);

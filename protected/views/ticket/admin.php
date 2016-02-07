@@ -7,7 +7,6 @@ $this->menu=array(
 	array('label'=>'运单列表', 'url'=>array('index')),
 	array('label'=>'创建运单', 'url'=>array('create')),
 );
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -21,6 +20,7 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
+
 <!--
 <h1>Manage Tickets</h1>
 
@@ -34,7 +34,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
 )); ?>
-</div><!-- search-form -->
+</div>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ticket-grid',

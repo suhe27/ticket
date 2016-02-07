@@ -4,12 +4,12 @@
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
-
+<!--
 	<div class="row">
 		<?php echo $form->label($model,'id'); ?>
 		<?php echo $form->textField($model,'id',array('size'=>10,'maxlength'=>10)); ?>
 	</div>
-
+!-->
 	<div class="row">
 		<?php echo $form->label($model,'order_id'); ?>
 		<?php echo $form->textField($model,'order_id',array('size'=>20,'maxlength'=>20)); ?>
@@ -119,12 +119,12 @@
 		<?php echo $form->label($model,'delivery_type'); ?>
 		<?php echo $form->textField($model,'delivery_type',array('size'=>20,'maxlength'=>20)); ?>
 	</div>
-
+<!--
 	<div class="row">
 		<?php echo $form->label($model,'comment'); ?>
 		<?php echo $form->textArea($model,'comment',array('rows'=>6, 'cols'=>50)); ?>
 	</div>
-
+!-->
 	<div class="row">
 		<?php echo $form->label($model,'partner'); ?>
 		<?php echo $form->textField($model,'partner',array('size'=>30,'maxlength'=>30)); ?>
