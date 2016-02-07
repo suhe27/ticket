@@ -71,7 +71,7 @@ class TicketController extends Controller
 			$model->attributes=$_POST['Ticket'];
 			$model->total_money=$model->weight * $model->price + $model->insurance + $model->packages + $model->pay_before;
 			if($model->size > 0)
-				$model->density=$model->weight / $model->size;
+				$model->density = round(($model->weight / $model->size),2);
 			else $model->density=0;
                         $model->create_time=time();
                         $model->update_time=time();
@@ -102,7 +102,7 @@ class TicketController extends Controller
 			$model->attributes=$_POST['Ticket'];
 			$model->total_money=$model->weight * $model->price + $model->insurance + $model->packages + $model->pay_before;
 			if($model->size > 0)
-				$model->density=$model->weight / $model->size;	
+				$model->density = round(($model->weight / $model->size),2);	
 			else $model->density = 0;
         		$model->update_time=time();
 			if($model->save())
