@@ -1,12 +1,13 @@
 <?php
+
 $this->breadcrumbs=array(
 	'运单管理',
 );
 
 $this->menu=array(
-	array('label'=>'运单列表', 'url'=>array('index')),
 	array('label'=>'创建运单', 'url'=>array('create')),
 );
+
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();
@@ -29,14 +30,19 @@ You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&g
 or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
 </p>
 !-->
-<?php echo CHtml::link('高级搜索','#',array('class'=>'search-button')); ?>
+<?php 
+	echo CHtml::link('高级搜索','#',array('class'=>'search-button')); 
+?>
 <div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
+<?php
+ $this->renderPartial('_search',array(
 	'model'=>$model,
-)); ?>
+)); 
+?>
 </div>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php
+ $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'ticket-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
@@ -45,7 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'order_id',
 		'order_number',
 		'send_time',
-		'user_code',
 		'package_name',
 		'package_num',
 		'weight',
@@ -64,19 +69,24 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'sender_city',
 		'receive_city',
 		'delivery_type',
-		//'comment',
-		//'partner',
-		//'user_id',
-		//'reward',
-		//'normal_price',
-		//'pay_money',
-		/*
-		'create_time',
-		'update_time',
-		'valid',
-		*/
+		'comment',
+		'partner',
+		'reward',
+		'normal_price',
+		'pay_money',
+		'user.name',
+		'user.city',
+		'user.phone',
+		'user.email',
+		'user.user_code',
+		//'create_time',
+		//'update_time',
+		//'valid',
+		
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
-)); ?>
+));
+ ?>
+

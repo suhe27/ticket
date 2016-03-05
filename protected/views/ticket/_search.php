@@ -26,11 +26,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'user_code'); ?>
-		<?php echo $form->textField($model,'user_code',array('size'=>20,'maxlength'=>20)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'package_name'); ?>
 		<?php echo $form->textField($model,'package_name',array('size'=>60,'maxlength'=>60)); ?>
 	</div>

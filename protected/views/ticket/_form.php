@@ -36,13 +36,6 @@
 		?>
 		<?php echo $form->error($model,'send_time'); ?>
 	</div>
-<!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'user_code'); ?>
-		<?php echo $form->textField($model,'user_code',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'user_code'); ?>
-	</div>
-!-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'package_name'); ?>
 		<?php echo $form->textField($model,'package_name',array('size'=>30,'maxlength'=>30)); ?>

@@ -16,10 +16,6 @@
 	<?php echo CHtml::encode($data->send_time); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('user_code')); ?>:</b>
-	<?php echo CHtml::encode($data->user_code); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('package_name')); ?>:</b>
 	<?php echo CHtml::encode($data->package_name); ?>
 	<br />

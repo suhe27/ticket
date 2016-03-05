@@ -150,6 +150,7 @@ class TicketController extends Controller
 	 */
 	public function actionAdmin()
 	{
+
 		$model=new Ticket('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Ticket']))

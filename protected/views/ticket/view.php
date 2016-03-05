@@ -22,7 +22,6 @@ $this->menu=array(
 		'order_id',
 		'order_number',
 		'send_time',
-		'user_code',
 		'package_name',
 		'package_num',
 		'weight',

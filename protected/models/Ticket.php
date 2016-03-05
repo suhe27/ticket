@@ -8,7 +8,6 @@
  * @property string $order_id
  * @property string $order_number
  * @property integer $send_time
- * @property string $user_code
  * @property string $package_name
  * @property integer $package_num
  * @property string $weight
@@ -64,7 +63,6 @@ class Ticket extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('user_code','unique','message'=>'客户代码已存在'),
 			array('order_id, order_number , send_time , package_name , size', 'required'),
 			array('send_time, package_num, package_size, packages, user_id, create_time, update_time, valid', 'numerical', 'integerOnly'=>true),
 			array('total_money, price, evalatue_money, insurance, pay_before, receive_by, normal_price, pay_money', 'numerical'),
@@ -86,6 +84,7 @@ class Ticket extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user'=>array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 
@@ -99,7 +98,6 @@ class Ticket extends CActiveRecord
 			'order_id' => '批次',
 			'order_number' => '票号',
 			'send_time' => '发货日期',
-			'user_code' => '客户代码',
 			'package_name' => '品名',
 			'package_num' => '件数',
 			'weight' => '重量',
@@ -122,7 +120,7 @@ class Ticket extends CActiveRecord
 			'partner' => '业务',
 			'user_id' => '客户',
 			'reward' => '返点',
-			'normal_price' => '低价',
+			'normal_price' => '底价',
 			'pay_money' => '应付款',
 			'create_time' => 'Create Time',
 			'update_time' => 'Update Time',
@@ -145,7 +143,6 @@ class Ticket extends CActiveRecord
 		$criteria->compare('order_id',$this->order_id,true);
 		$criteria->compare('order_number',$this->order_number,true);
 		$criteria->compare('send_time',$this->send_time);
-		//$criteria->compare('user_code',$this->user_code,true);
 		$criteria->compare('package_name',$this->package_name,true);
 		$criteria->compare('package_num',$this->package_num);
 		$criteria->compare('weight',$this->weight,true);
@@ -178,4 +175,5 @@ class Ticket extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
 }
